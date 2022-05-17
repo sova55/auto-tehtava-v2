@@ -7,6 +7,7 @@ const cors = require('cors');
 
 
 const bookRouter = require('./routes/book');
+const carRouter = require('./routes/car');
 
 var app = express();
 
@@ -20,5 +21,6 @@ app.use(cors());
 
 
 app.use('/book', bookRouter);
+app.use('/car', carRouter);
 
 module.exports = app;
