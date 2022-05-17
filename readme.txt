@@ -1,11 +1,11 @@
 // MySQL DB Creation
 
-CREATE DATABASE netdb;
-CREATE USER 'netuser'@'localhost' IDENTIFIED WITH mysql_native_password BY 'netpass';
-GRANT ALL on netdb.* to 'netuser'@'localhost';
+CREATE DATABASE testidb;
+CREATE USER 'testiuser'@'localhost' IDENTIFIED WITH mysql_native_password BY 'testpass';
+GRANT ALL on testidb.* to 'testiuser'@'localhost';
 
 
-USE netdb;
+USE testidb;
 
 CREATE TABLE book(
 id_book INT primary key auto_increment,
@@ -23,3 +23,6 @@ id INT primary key auto_increment,
 branch VARCHAR(255),
 model  VARCHAR(255)
 );
+
+INSERT INTO car(branch,model) VALUES ('Valmet Automotive', 'Saab 95');
+INSERT INTO car(branch,model) VALUES ('Toyota', 'Corolla E120');
